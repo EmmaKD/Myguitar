@@ -22,7 +22,10 @@
         /* Following are the lists of different guitars that we have. The differerent guitars and similar string instruments would also be in their own list.
      */
 
-   
+   function sortGuitars(){
+   	
+   	
+   }
     //*This will select all guitar types in the list and put them in their own list.
     
     /*This is my Guitar list object*/
@@ -31,14 +34,12 @@
    
     var  modernGuitars = [{"type":"Acoustic"}, {"type":"Semi-Acoustic"}, {"type": "Electric"}, {"type": "Bass Guitar"}, {"type": "Lead Guitar"}, {"type": "Rythm Guitar"}, {"type": "Long Guitar"}];
    
-    var traditionalGuitars = [{"type":"acousticGuitar", "type":"jembeGuitar"}, {"type": "moloGuitar"},{"type": "strummingGuitar"}, {"type": "vibratingGuitar"}, {"type": "italianGuitar"}, {"type": "plasticstringGuitar"}];
+    var traditionalGuitars = [{"type":"rumbaGuitar", "type":"jembeGuitar"}, {"type": "moloGuitar"},{"type": "strummingGuitar"}, {"type": "vibratingGuitar"}, {"type": "italianGuitar"}, {"type": "plasticstringGuitar"}];
    
-     
-   
+      
    
     console.log(myGuitarlist);
-   
-   
+      
    
     var modernGuitars =[];
     var traditionalGuitars = [];
@@ -73,16 +74,23 @@
         	console.log("not goodGuitar");
         	traditionalGuitars.push(currentGuitar);
         	
-        }
+        	
+        
         console.log(modernGuitars);
         console.log(traditionalGuitars);
+         } /*this is the end of loop*/
         // In order to make loop attractive, we need a "counter" that starts with at 0 because for comouter the counting
     // rule is different than the we learnt in school... starts from 0.. that's all. And, also keep on counting the list until
     // it reaches to zero. i++ means every time the loop goes through, ass 1 to our counter.
-      }
-        console.log(i);
-       
-      
+    
+    console.log(traditionalGuitars);
+    console.log(modernGuitars);
+    
+    /*sort guitars */
+    
+    sortGuitars();
+     }
+             
    
     
    
