@@ -13,90 +13,85 @@
 </html>
 
 <script>
-   
- 
+    
 			//A friend recently gave me a guitar to practice.
 			//There is one Guitar, but there are different types of guitars and string instruments.
 
        
-        /* Following are the lists of different guitars that we have. The differerent guitars and similar string instruments would also be in their own list.
-     */
+   /*this is the sort function*/
 
-   function sortGuitars(){
-   	   	
-   }
     //*This program will select all guitar types in the list and put them in their own list.
     
-    /*This is my Guitar list object*/
-   
-    var myGuitarlist = [{"type":"spanishGuitar"}, {"type":"rockGuitar"},{"type":"reggaeGuitar"}, {"type":"popGuitar"}, {"type": "calipsoGuitar"}];
-   
-  
-    var  modernGuitars = [{"type":"Acoustic"}, {"type":"Semi-Acoustic"}, {"type": "Electric"}, {"type": "Bass Guitar"}, {"type": "Lead Guitar"}, {"type": "Rythm Guitar"}, {"type": "Long Guitar"}];
-   
-    var traditionalGuitars = [{"type":"rumbaGuitar", "type":"jembeGuitar"}, {"type": "moloGuitar"},{"type": "strummingGuitar"}, {"type": "vibratingGuitar"}, {"type": "italianGuitar"}, {"type": "plasticstringGuitar"}];
-   
-         
-    console.log(myGuitarlist);
-      
-    /*these are the lists that we can add our guitars to and test to see if they are rock guitar*/
+  /* Following are the lists of different guitars that we have. The differerent guitars and similar string instruments would also be in their own list.
+     */ 
+ 
+ 	   var someGuitars = [{"type":"spanishGuitar"}, {"type":"rockGuitar"},{"type":"reggaeGuitar"}, {"type":"spanishGuitar"}, {"type": "calipsoGuitar"}];
+
+ 	   var moreGuitars = [{"type":"moloGuitar"}, {"type":"rockGuitar"},{"type":"reggaeGuitar"}, {"type":"spanishGuitar"}];
+
+ 	  function sortGuitars(myGuitarlist){	
+ 	  	
+ 	  
+ 	 /*create my guitar list objects*/
+    
+         	
+    /*these are the lists that we can add our guitars to and test to see if they are spanishGuitar*/
     var modernGuitars =[];
     var traditionalGuitars = [];
    
-    console.log(modernGuitars);
-    console.log(traditionalGuitars);
-   
-    // create my list of cats that can be divided into groups: good cats and bad cats.In doing so, look at the "type" property
-    // and if you find "young"  add it to the goodcats otherwise add it to the badcats.
-   
-    // create a loop that looks into the cats list one at a time, and test each item to see of it has "type" is young
-
-     // Make sure that every cat groups that we have listed here as "type" property, and be careful that if the property
-     // has a value "young" .
-
-   /*this is the counter for our for loop that starts with 0 */
-    for(var i=0; i<5; i++){
+    /*create a list that steps into the Guitarlist one item at a time and then
+    * then test each item to see its "type" is spanishGuitar
+    * for every guitar in our list look for its property and 
+    * if that property has the value spanishGuitar, add it to our modernGuitars list
+    * otherwise add it to our traditionalgGuitars list
+    */
+    
+    /*we need a counter that starts with a 0 for our "for loop" and it goes on till the end of the loop*/
+      
+    // start our counter at 0 and stopt while it is still less than the total length of the list
+    
+    //everytime loop goes through add 1 to our counter
+     
+     //lists have their own in-built function for measuring their own length
+    for(var i=0; i<myGuitarlist.length; i++){
     	
-    	console.log(i);
-    	
-    	var currentGuitar = myGuitarlist[i];     	
-    	console.log(currentGuitar.type);
+
+    
+    var currentGuitar = myGuitarlist[i];
        
-       /*our conditional if "type" is 
-                */
-        /*double equals is equal to "as the sams as"*/
-       
-        if(currentGuitar.type == "rockGuitar"){
-        	console.log("found goodGuitar!");
-        	modernGuitars.push(currentGuitar);
-        }else{
-        	console.log("not goodGuitar");
-        	traditionalGuitars.push(currentGuitar);
-        	
-        	
+ 
+   
+   //the conditional says if "type" is spanishGuitars add object to modernGuitarlist
+   //otherwise add to traditonalGuitars list
+   //the double equals sign is equivalent to "same as"
+   
+   if(currentGuitar.type == "spanishGuitar"){
+     modernGuitars.push(currentGuitar);
+    
+    }else{
+    
         
-        console.log(modernGuitars);
-        console.log(traditionalGuitars);
-         } /*this is the end of loop*/
-        // In order to make loop attractive, we need a "counter" that starts with at 0 because for comouter the counting
-    // rule is different than the we learnt in school... starts from 0.. that's all. And, also keep on counting the list until
-    // it reaches to zero. i++ means every time the loop goes through, ass 1 to our counter.
+    traditionalGuitars.push(currentGuitar);
+    	
+    } //this is end of the conditional "if/else"	
     
-    console.log(traditionalGuitars);
-    console.log(modernGuitars);
-    
-    /*sort guitars */
-    
-    sortGuitars();
-     }
-             
-   
-    
-   
-   
 
+   	}//this is end of the for loop
+    
+      console.log(modernGuitars);
+   	  console.log(traditionalGuitars);
    
+   }
+    
+    
+    console.log ("first list")  
+   //actually execute sortGuitars function
    
+   sortGuitars(someGuitars);
+   
+   console.log ("second list");
+   //run that function again with a different list of guitars
+   sortGuitars(moreGuitars);
    
    
    
