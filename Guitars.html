@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+
+        <title>My Guitar </title>
+    </head>
+    <body>
+        <h1>Story of my Guitar</h1>
+    </body>
+</html>
+
+<script>
+   
+ 
+			//A friend recently gave me a guitar to practice.
+			//There is one Guitar, but there are different types of guitars and string instruments.
+
+       
+        /* Following are the lists of different guitars that we have. The differerent guitars and similar string instruments would also be in their own list.
+     */
+
+   
+    //*This will select all guitar types in the list and put them in their own list.
+    
+    /*This is my Guitar list object*/
+   
+    var myGuitarlist = [{"type":"spanishGuitar"}, {"type":"rockGuitar"},{"type":"reggaeGuitar"}, {"type":"popGuitar"}, {"type": "calipsoGuitar"}];
+   
+    var  modernGuitars = [{"type":"Acoustic"}, {"type":"Semi-Acoustic"}, {"type": "Electric"}, {"type": "Bass Guitar"}, {"type": "Lead Guitar"}, {"type": "Rythm Guitar"}, {"type": "Long Guitar"}];
+   
+    var traditionalGuitars = [{"type":"acousticGuitar", "type":"jembeGuitar"}, {"type": "moloGuitar"},{"type": "strummingGuitar"}, {"type": "vibratingGuitar"}, {"type": "italianGuitar"}, {"type": "plasticstringGuitar"}];
+   
+     
+   
+   
+    console.log(myGuitarlist);
+   
+   
+   
+    var modernGuitars =[];
+    var traditionalGuitars = [];
+   
+    console.log(modernGuitars);
+    console.log(traditionalGuitars);
+   
+    // create my list of cats that can be divided into groups: good cats and bad cats.In doing so, look at the "type" property
+    // and if you find "young"  add it to the goodcats otherwise add it to the badcats.
+   
+    // create a loop that looks into the cats list one at a time, and test each item to see of it has "type" is young
+
+     // Make sure that every cat groups that we have listed here as "type" property, and be careful that if the property
+     // has a value "young" .
+
+   /*this is the counter for our for loop that starts with 0 */
+    for(var i=0; i<5; i++){
+    	
+    	console.log(i);
+    	
+    	var currentGuitar = myGuitarlist[i];     	
+    	console.log(currentGuitar.type);
+       
+       /*our conditional if "type" is 
+                */
+        /*double equals is equal to "as the sams as"*/
+       
+        if(currentGuitar.type == "rockGuitar"){
+        	console.log("found goodGuitar!");
+        	modernGuitars.push(currentGuitar);
+        }else{
+        	console.log("not goodGuitar");
+        	traditionalGuitars.push(currentGuitar);
+        	
+        }
+        console.log(modernGuitars);
+        console.log(traditionalGuitars);
+        // In order to make loop attractive, we need a "counter" that starts with at 0 because for comouter the counting
+    // rule is different than the we learnt in school... starts from 0.. that's all. And, also keep on counting the list until
+    // it reaches to zero. i++ means every time the loop goes through, ass 1 to our counter.
+      }
+        console.log(i);
+       
+      
+   
+    
+   
+   
+
+   
+   
+   
+   
+   
+   
+</script>
